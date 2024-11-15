@@ -1,3 +1,17 @@
-h1 {
+/* h1 {
     color: pink;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* MOBILE FIRST */
+
+/* variable list */
+:root {
+    
+    /* H1 styles*/
+    --h1-font-family: "Montserrat";
+    --h1-font-size:90px;
+    --h1-font-weight:600;
+    --h1-line-height:90px;
 }
