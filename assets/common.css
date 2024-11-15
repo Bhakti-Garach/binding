@@ -1,3 +1,5 @@
-h1 {
-    color: tomato;
+:root {
+    
+    /* general styles */
+	--base-size: 20px;
 }
