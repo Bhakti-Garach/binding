@@ -1,3 +1,11 @@
+  /* font */
+  @font-face {
+    font-family: TimesNow-ExtraLight;
+    src: url(fonts/TimesNow-ExtraLight.ttf);
+}
+
+
+
 /* variable list */
 :root {
     --menu-bg: black;
@@ -9,13 +17,18 @@
     --circle-size: 15px;
     --circle-spacing: 0.5rem;
     --arrow-color: white;
+    --book-color: white;
+
+    /* font styles */
+    --heading-font: TimesNow-ExtraLight;
 
     /* h1 style */
-    --h1-font-size: 2.5rem;
+    --h1-font-size: 4rem;
     --h1-margin: 0;
     --h1-color: white;
-
   }
+
+
 
 body {
     margin: 1rem;
@@ -151,6 +164,7 @@ body {
   }
 
   h1 {
+    font-family: var(--heading-font);
     font-size: var(--h1-font-size);
     margin: var(--h1-margin);
     color: var(--h1-color);
@@ -199,5 +213,71 @@ body {
     transform: translateY(5px) rotate(45deg);
   }
 }
+
+/* book rack container*/
+.book-rack {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* book visual */
+  .book-visual {
+    position: relative;
+    width: 120px;
+    height: 250px;
+    background-color: var(--book-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.book-visual:hover {
+    background-color: #EAFF01;
+    color: black;
+  }
+
+.center-text {
+    color: black;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+  }
+  
+  .vertical-text {
+    color: var(--text-color);
+    text-transform: uppercase;
+  }
+
+  /* book type */
+  .book-type {
+    position: relative;
+    width: 120px;
+    height: 250px;
+    background-color: var(--book-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-type:hover {
+    background-color: #EAFF01;
+    color: black;
+  }
+
+  .type-author {
+    color: black;
+  }
+
+  .text-horizontal {
+    writing-mode: vertical-rl;
+    color: black;
+  }
 
 
