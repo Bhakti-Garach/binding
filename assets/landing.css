@@ -173,8 +173,8 @@ body {
   }
   
   .arrow-1 {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border: solid var(--arrow-color);
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
@@ -182,8 +182,8 @@ body {
   }
   
   .arrow-2 {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border: solid var(--arrow-color);
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
@@ -192,11 +192,11 @@ body {
   }
 
 @keyframes bounce {
-  0%, 50% {
+  0%, 100% {
     transform: translateY(0) rotate(45deg);
   }
   50% {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
   }
 }
 
