@@ -64,7 +64,7 @@ body {
 
   /* Sticky menu styles */
 .menu {
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: var(--menu-bg);
     z-index: 10;
