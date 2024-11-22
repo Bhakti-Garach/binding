@@ -1,5 +1,17 @@
 :root {
-    
+
     /* general styles */
 	--base-size: 20px;
+}
+body {
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@media (min-width: 800px) {
+    body {
+        max-width: 65ch;
+        margin: auto;
+    }
 }
