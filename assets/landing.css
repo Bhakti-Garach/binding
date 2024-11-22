@@ -8,6 +8,12 @@
     --menu-underline-width: 1px;
     --circle-size: 15px;
     --circle-spacing: 0.5rem;
+    --arrow-color: white;
+
+    /* h1 style */
+    --h1-font-size: 2.5rem;
+    --h1-margin: 0;
+    --h1-color: white;
 
   }
 
@@ -134,5 +140,64 @@ body {
     text-decoration: underline var(--circle-color) var(--menu-underline-width);
     text-underline-offset: 4px;
   }
+
+  .main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    margin: var(--h1-margin);
+    color: var(--h1-color);
+  }
+
+  p {
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+    color: var(--menu-text-color);
+  }
+
+/* Arrows style */
+.arrows {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .arrow-1 {
+    width: 20px;
+    height: 20px;
+    border: solid var(--arrow-color);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    animation: bounce 1s infinite;
+  }
+  
+  .arrow-2 {
+    width: 20px;
+    height: 20px;
+    border: solid var(--arrow-color);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    animation: bounce 1s infinite;
+    animation-delay: 0.5s;
+  }
+
+@keyframes bounce {
+  0%, 50% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
 
 
