@@ -21,6 +21,8 @@
 
     /* font styles */
     --heading-font: TimesNow-ExtraLight;
+    --body-font: DM Sans;
+    --bookvisualtitle1-font: Cinzel;
 
     /* h1 style */
     --h1-font-size: 4rem;
@@ -217,8 +219,8 @@ body {
 /* book rack container*/
 .book-rack {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 0.6rem;
+    align-items:end;
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -228,7 +230,7 @@ body {
   .book-visual {
     position: relative;
     width: 120px;
-    height: 250px;
+    height: 450px;
     background-color: var(--book-color);
     display: flex;
     flex-direction: column;
@@ -248,7 +250,9 @@ body {
     margin: 0.5rem 0;
   }
   
-  .vertical-text {
+  .text-vertical {
+    font-family: var(--bookvisualtitle1-font);
+    font-size: 1.5rem;
     color: var(--text-color);
     text-transform: uppercase;
   }
@@ -256,8 +260,8 @@ body {
   /* book type */
   .book-type {
     position: relative;
-    width: 120px;
-    height: 250px;
+    width: 80px;
+    height: 350px;
     background-color: var(--book-color);
     display: flex;
     flex-direction: column;
