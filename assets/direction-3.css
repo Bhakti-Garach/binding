@@ -1,3 +1,90 @@
-h1 {
+/* h1 {
     color: green;
+} */
+
+/* h1 {
+    color: pink;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+/* MOBILE FIRST */
+
+/* variable list */
+:root {
+    
+    /* H1 styles*/
+    --h1-font-family: "Koulen";
+    --h1-font-size:60px;
+    --h1-font-weight:600;
+    --h1-line-height:60px;
+    --h1-color:red;
+
+    /* H2 styles */
+    --h2-font-family: "Koulen";
+    --h2-font-size: 48px;
+    --h2-font-weight: 500;
+    --h2-line-height: 54px;
+
+    /* H3 styles */
+    --h3-font-family: "Koulen";
+    --h3-font-size: 32px;
+    --h3-font-weight: 500;
+    --h3-line-height: 42px;
+
+    /* H4 styles */
+	--p-font-family: "Inconsolata";
+	--p-font-size:23px;
+	--p-font-weight:600;
+	--p-line-height:30px;
+
+    /* p styles*/
+	--p-font-family: "Inconsolata";
+	--p-font-size:17px;
+	--p-font-weight:400;
+	--p-line-height:20px;
+    --p-padding-top:20px;
+    --p-padding-bottom:20px;
+}
+
+/* heading styles */
+h1{
+	margin: auto;
+	font-family: var(--h1-font-family);
+	font-size: var(--h1-font-size);
+	font-weight:var(--h1-font-weight);
+	line-height:var(--h1-line-height);
+	text-transform:uppercase;
+    color: red;
+}
+
+h2{
+	margin: auto;
+	font-family: var(--h2-font-family);
+	font-size: var(--h2-font-size);
+	font-weight:var(--h2-font-weight);
+	line-height:var(--h2-line-height);
+	text-transform:uppercase;
+}
+
+h3{
+	margin: auto;
+	font-family: var(--h3-font-family);
+	font-size: var(--h3-font-size);
+	font-weight:var(--h3-font-weight);
+	line-height:var(--h3-line-height);
+	text-transform:uppercase;
+}
+
+p{
+	font-family: var(--p-font-family);
+	font-size: var(--p-font-size);
+	font-weight: var(--p-font-weight);
+	line-height: var(--p-line-height);
+    padding-top: var(--p-padding-top);
+    padding-bottom: var(--p-padding-bottom);
+}
+
+body{
+    background-color: #F0EFE9;
 }
