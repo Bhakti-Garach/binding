@@ -21,6 +21,7 @@
 
     /* font styles */
     --heading-font: TimesNow-ExtraLight;
+	--subheading-font: TimesNow-ExtraLight;
     --body-font: DM Sans;
     --bookvisualtitle1-font: Cinzel;
 
@@ -28,6 +29,16 @@
     --h1-font-size: 4rem;
     --h1-margin: 0;
     --h1-color: white;
+
+    /* h2 style */
+    --h2-font-size: 1.5rem;
+    --h2-margin: 0;
+    --h2-color: white;
+
+    /* h3 style */
+    --h3-font-size: 1rem;
+    --h3-margin: 0;
+    --h3-color: white;
   }
 
 
@@ -156,4 +167,25 @@ body {
     text-underline-offset: 4px;
   }
 
-  
+      /* desktop media query */
+@media (min-width: 1280px) {
+    article {
+        margin: auto;
+        max-width: 80%;
+        }
+    }
+
+h2 {
+	font-family: var(--heading-font);
+	font-size: var(--h2-font-size);
+}
+
+h3{
+	font-family: var(--subheading-font);
+	font-size: var(--h3-font-size);
+}
+
+
+
+
+
