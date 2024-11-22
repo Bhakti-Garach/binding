@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Binding</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/reset.css" rel="stylesheet">
+        <link href="assets/common.css" rel="stylesheet">
+        <!-- <link href="assets/direction-1.css" rel="stylesheet"> -->
+        <!-- <link href="assets/direction-2.css" rel="stylesheet"> -->
+        <!-- <link href="assets/direction-3.css" rel="stylesheet"> -->
+
+        <!-- fonts -->
+        <!-- DM Mono -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+        <!-- DM Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <!-- sticky menu -->
+             <nav>
+                <ul class="menu-grid">
+                    <li><a href="index.html" class="menu-item home">Home</a></li>
+                    <li><a href="#colophon" class="menu-item colophon">Colophon</a></li>
+                    <li><a href="article1.html" class="menu-item visual">Visual</a></li>
+                    <li><a href="#type" class="menu-item type">Type</a></li>
+                    <li><a href="#interaction" class="menu-item interaction">Interaction</a></li>
+                    <li><a href="#reading" class="menu-item reading">Reading</a></li>
+                  </ul>
+             </nav>
+        </header>
+        
+        <!-- form -->   
+        <article class="form-container">
+                <h1>Share Your Book Recommendation</h1>
+                <p>We'd love to hear your book recommendations. Please share your favorite book and why it's worth reading! We'll display your recommendations above in 'Recommended Readings'.</p>
+            
+            <form action="https://formspree.io/f/mqaklwnr" method="POST" class="book-form">
+                <label for="bookRecommendation">Recommendation</label>
+                <textarea id="bookRecommendation" name="bookRecommendation" placeholder="Why do you recommend this book?" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Submit Recommendation</button>
+            </form>
+        </article>
+  </body>
+  </html>
+  
