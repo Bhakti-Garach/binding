@@ -1,17 +1,245 @@
-:root {
+
 
     /* general styles */
-	--base-size: 20px;
-}
-body {
-    margin: auto;
-    padding-left: 2%;
-    padding-right: 2%;
+	/* --base-size: 20px; */
+
+  /* font */
+  @font-face {
+    font-family: TimesNow-ExtraLight;
+    src: url(fonts/TimesNow-ExtraLight.ttf);
 }
 
-@media (min-width: 800px) {
-    body {
-        max-width: 65ch;
-        margin: auto;
+
+
+/* variable list */
+:root {
+    --menu-bg: black;
+    --menu-font: 'DM Mono';
+    --menu-text-color: white;
+    --menu-font-size: 1rem;
+    --menu-padding: 1rem;
+    --menu-underline-width: 1px;
+    --circle-size: 15px;
+    --circle-spacing: 0.5rem;
+    --arrow-color: white;
+    --book-color: white;
+
+    /* font styles */
+    --heading-font: TimesNow-ExtraLight;
+    --body-font: DM Sans;
+    --bookvisualtitle1-font: Cinzel;
+
+    /* h1 style */
+    --h1-font-size: 4rem;
+    --h1-margin: 0;
+    --h1-color: white;
+  }
+
+
+
+body {
+    margin: 1rem;
+    background-color: black;
+  }
+
+  /* circle colors */
+  .home {
+    --circle-color: #1FDE86;
+  }
+  
+  .colophon {
+    --circle-color: #948EFF;
+  }
+  
+  .visual {
+    --circle-color: #EAFF01;
+  }
+  
+  .type {
+    --circle-color: #F4320C;
+  }
+  
+  .interaction {
+    --circle-color: #FF8BCD;
+  }
+  
+  .reading {
+    --circle-color: #0095FF;
+  }
+
+  /* Sticky menu styles */
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: var(--menu-bg);
+    z-index: 10;
+    padding: var(--menu-padding);
+  }
+
+  .menu-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Desktop media query*/
+  @media (min-width: 1280px) {
+    .menu-grid {
+      grid-template-columns: repeat(6, 1fr);
     }
-}
+  }
+
+  .menu-item {
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+    color: var(--menu-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    padding: 0.5rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+  animation: slideIn 0.6s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .menu-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .menu-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .menu-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .menu-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .menu-item:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .menu-item:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .menu-item::before {
+    content: '';
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--circle-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: var(--circle-spacing);
+  }
+
+  .menu-item:hover {
+    color: var(--circle-color);
+    text-decoration: underline var(--circle-color) var(--menu-underline-width);
+    text-underline-offset: 4px;
+  }
+
+  /* form style */
+
+  .form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-color: white;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    margin: var(--h1-margin);
+    color: var(--h1-color);
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.1em;
+    color: white;
+  }
+  
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s ease;
+    color: #6a6a6a;
+  }
+  
+  textarea:focus {
+    border-color: #0077cc;
+  }
+  
+  button.submit-btn {
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Mobile media query */
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    .book-form {
+      gap: 10px;
+    }
+  }
+  
+  
