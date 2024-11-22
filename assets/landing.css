@@ -173,8 +173,8 @@ body {
   }
   
   .arrow-1 {
-    width: 15px;
-    height: 15px;
+    width: 0.7rem;
+    height: 0.7rem;
     border: solid var(--arrow-color);
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
@@ -182,8 +182,8 @@ body {
   }
   
   .arrow-2 {
-    width: 15px;
-    height: 15px;
+    width: 0.7rem;
+    height: 0.7rem;
     border: solid var(--arrow-color);
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
