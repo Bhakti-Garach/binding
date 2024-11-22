@@ -204,7 +204,7 @@ body {
     border-radius: 4px;
     outline: none;
     transition: border 0.3s ease;
-    color: #6a6a6a;
+    color: #e0bcbc;
   }
   
   textarea:focus {
