@@ -280,4 +280,32 @@ body {
     color: black;
   }
 
+  /* book interaction */
+  .book-interaction {
+    position: relative;
+    width: 120px;
+    height: 250px;
+    background-color: var(--book-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-interaction:hover {
+    background-color: #FF8BCD;
+    color: white;
+  }
+
+  .interaction-author {
+    writing-mode: vertical-rl;
+    color: black;
+  }
+
+  .interaction-spine-title {
+    writing-mode: vertical-rl;
+    color: black;
+  }
+
 
