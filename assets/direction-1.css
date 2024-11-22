@@ -36,7 +36,7 @@
 
     /* p styles*/
 	--p-font-family: "Inconsolata";
-	--p-font-size:15px;
+	--p-font-size:17px;
 	--p-font-weight:400;
 	--p-line-height:20px;
     --p-padding-top:20px;
@@ -51,6 +51,7 @@ h1{
 	font-weight:var(--h1-font-weight);
 	line-height:var(--h1-line-height);
 	text-transform:uppercase;
+    color: red;
 }
 
 h2{
