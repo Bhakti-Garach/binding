@@ -13,6 +13,8 @@
 
 /* variable list */
 :root {
+
+    /* menu style */
     --menu-bg: black;
     --menu-font: 'DM Mono';
     --menu-text-color: white;
@@ -21,16 +23,29 @@
     --menu-underline-width: 1px;
     --circle-size: 15px;
     --circle-spacing: 0.5rem;
+
+    /* general style */
+    --base-size: 20px;
     --arrow-color: white;
     --book-color: white;
 
-    /* font styles */
-    --heading-font: TimesNow-ExtraLight;
+    /* font style */
+    --heading-font: Instrument Serif;
+    --subheading-font: Instrument Serif;
+    --block-quote-font: Instrument Serif;
     --body-font: DM Sans;
-    --bookvisualtitle1-font: Cinzel;
+    --book-visual-font-1: Marcellus;
+    --book-visual-font-2: Marcellus;
+
+    /* color style */
+    --body-bg-color: #0F1314;
+    --bg-color-1: yellow;
+    --bg-color-2: yellow;
+    --bg-color-3: yellow;
+    --highlight-color: yellow;
 
     /* h1 style */
-    --h1-font-size: 4rem;
+    --h1-font-size: 2rem;
     --h1-margin: 0;
     --h1-color: white;
   }
