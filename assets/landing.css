@@ -64,7 +64,7 @@ body {
 
   /* Sticky menu styles */
 .menu {
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: var(--menu-bg);
     z-index: 10;
@@ -252,9 +252,10 @@ body {
   
   .text-vertical {
     font-family: var(--bookvisualtitle1-font);
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     color: var(--text-color);
     text-transform: uppercase;
+    padding: auto;
   }
 
   /* book type */
