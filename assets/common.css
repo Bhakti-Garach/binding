@@ -33,7 +33,7 @@
     --heading-font: Instrument Serif;
     --subheading-font: Instrument Serif;
     --block-quote-font: Instrument Serif;
-    --body-font: DM Sans;
+    --body-font: Hanken Grotesk;
     --book-visual-font-1: Marcellus;
     --book-visual-font-2: Lustria;
     --book-type-font-1: Chivo;
@@ -45,6 +45,7 @@
     --bg-color-2: yellow;
     --bg-color-3: yellow;
     --highlight-color: yellow;
+    --book-border: #656565;
 
     /* h1 style */
     --h1-font-size: 2rem;
@@ -85,13 +86,6 @@ body {
   }
 
   /* Sticky menu styles */
-.menu {
-    position: sticky;
-    top: 0;
-    background-color: var(--menu-bg);
-    z-index: 10;
-    padding: var(--menu-padding);
-  }
 
   .menu-grid {
     display: grid;
@@ -102,6 +96,11 @@ body {
     padding: 0;
     margin: 0;
     text-align: left;
+    position: sticky;
+    top: 0;
+    background-color: var(--menu-bg);
+    z-index: 100;
+    padding: var(--menu-padding);
   }
 
   /* Desktop media query*/
