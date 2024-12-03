@@ -1,4 +1,54 @@
+/* variable list */
+:root {
 
+  /* menu style */
+  --menu-bg: black;
+  --menu-font: 'DM Mono';
+  --menu-text-color: white;
+  --menu-font-size: 1rem;
+  --menu-padding: 1rem;
+  --menu-underline-width: 1px;
+  --circle-size: 15px;
+  --circle-spacing: 0.5rem;
+
+  /* general style */
+  --base-size: 20px;
+  --arrow-color: white;
+  --book-color: white;
+
+  /* font style */
+  --heading-font: Instrument Serif;
+  --subheading-font: Instrument Serif;
+  --block-quote-font: Instrument Serif;
+  --body-font: Hanken Grotesk;
+  --book-visual-font-1: Marcellus;
+  --book-visual-font-2: Lustria;
+  --book-type-font-1: Chivo;
+  --book-color-font-1: 'Crimson Text';
+
+  /* color style */
+  --body-bg-color: #0F1314;
+  --bg-color-1: yellow;
+  --bg-color-2: yellow;
+  --bg-color-3: yellow;
+  --highlight-color: yellow;
+  --book-border: #656565;
+  --body-color: white;
+
+  /* h1 style */
+  --h1-font-size: 2rem;
+  --h1-margin: 0;
+  --h1-color: white;
+
+  /* paragraph style */
+    --p-font-size: 1rem;
+    --p-font-weight: 200;
+    --p-padding-top: 0.5rem;
+    --p-padding-bottom: 0.5rem;
+    --p-line-height: 1.5rem;
+    --p-letter-spacing: 0.5px;
+    --p-color: white;
+}
   .main {
     text-align: center;
     display: flex;
@@ -16,10 +66,13 @@
   }
 
   p {
-    font-family: var(--menu-font);
-    font-size: var(--menu-font-size);
-    text-transform: uppercase;
-    color: var(--menu-text-color);
+    font-family: var(--body-font);
+    font-size: var(--p-font-size);
+    font-weight: var(--p-font-weight);
+    color: var(--body-color);
+    line-height: var(--p-line-height);
+    letter-spacing: var(--p-letter-spacing);
+    margin: 1rem;
   }
 
 /* Arrows style */
@@ -88,30 +141,35 @@
   }
 
 .center-text {
-    color: black;
-    text-transform: uppercase;
-    margin: 0.5rem 0;
+  font-family: var(--book-visual-font-2);
+  color: black;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
   }
   
   .text-vertical {
-    font-family: var(--bookvisualtitle1-font);
+    font-family: var(--book-visual-font-1);
     font-size: 3.5rem;
+    line-height: 3.2rem;
     color: var(--text-color);
     text-transform: uppercase;
-    padding: auto;
   }
 
   /* book type */
   .book-type {
     position: relative;
-    width: 80px;
-    height: 350px;
+    width: 40px;
+    height: 550px;
     background-color: var(--book-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .book-type:hover {
@@ -121,39 +179,154 @@
 
   .type-author {
     color: black;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-family: var(--book-type-font-1);
+    font-weight: 300;
+    font-size: 0.7rem;
   }
 
   .text-horizontal {
     writing-mode: vertical-rl;
     color: black;
+    text-transform: uppercase;
+    font-family: var(--book-type-font-1);
+    font-weight: 600;
   }
 
-  /* book interaction */
-  .book-interaction {
+  /* book color */
+  .book-color {
     position: relative;
-    width: 120px;
-    height: 250px;
+    width: 80px;
+    height: 500px;
     background-color: var(--book-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
   }
 
-  .book-interaction:hover {
+  .book-color:hover {
     background-color: #FF8BCD;
     color: white;
   }
 
-  .interaction-author {
-    writing-mode: vertical-rl;
+  .color-author {
     color: black;
+    font-family: var(--book-color-font-1);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-bottom: 20px;
   }
 
-  .interaction-spine-title {
+  .color-spine-title {
     writing-mode: vertical-rl;
     color: black;
+    padding-top: 20px;
+    font-family: var(--book-color-font-1);
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+
+  /* Empty Books */
+  .empty-book-1 {
+    position: relative;
+    width: 60px;
+    height: 600px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-2 {
+    position: relative;
+    width: 60px;
+    height: 600px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-3 {
+    position: relative;
+    width: 20px;
+    height: 470px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-4 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-5 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-6 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-7 {
+    position: relative;
+    width: 20px;
+    height: 400px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-8 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-9 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-10 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
+  }
+
+  .empty-book-11 {
+    position: relative;
+    width: 50px;
+    height: 520px;
+    border: solid 1px;
+    border-color: var(--book-border);
+
   }
 
 
