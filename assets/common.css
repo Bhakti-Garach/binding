@@ -18,7 +18,7 @@
     --menu-bg: black;
     --menu-font: 'DM Mono';
     --menu-text-color: white;
-    --menu-font-size: 1rem;
+    --menu-font-size: 0.9rem;
     --menu-padding: 1rem;
     --menu-underline-width: 1px;
     --circle-size: 15px;
@@ -93,7 +93,7 @@ body {
     top: 0;
   } */
 
-  /* .menu-grid {
+  .menu-grid {
     display: grid;
     gap: 0.5rem;
     grid-template-columns: repeat(3, 1fr);
@@ -101,7 +101,6 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
     height: 80px;
     text-align: left;
     position: fixed;
@@ -109,10 +108,12 @@ body {
     background-color: var(--menu-bg);
     z-index: 1;
     padding: var(--menu-padding);
-  } */
+    margin: auto;
+    width: 100%;
+  }
 
   /* Mobile Menu */
-  @media (min-width: 375px) {
+  /* @media (min-width: 375px) {
     .mobile-menu {
         display: flex;
     }
@@ -124,7 +125,7 @@ body {
         background-color: black;
         align-items: flex-start;
     }
-  }
+  } */
 
   /* Desktop media query*/
   @media (min-width: 1280px) {
@@ -155,7 +156,43 @@ body {
     align-items: center;
     justify-content: left;
     position: relative;
-    padding: 0.5rem;
+    padding-top: 1rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+  animation: slideIn 0.6s ease-out forwards;
+  }
+
+  /* Tablet media query*/
+  @media (min-width: 680px) {
+    .menu-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    background-color: var(--menu-bg);
+    z-index: 1;
+    padding: var(--menu-padding);
+    }
+  }
+
+  .menu-item {
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+    color: var(--menu-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    padding-top: 1rem;
     overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
