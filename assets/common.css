@@ -58,6 +58,8 @@
 body {
     margin: 1rem;
     background-color: black;
+    margin: auto;
+    overflow-x: hidden;
   }
 
   /* circle colors */
@@ -99,17 +101,17 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     list-style: none;
-    padding: 0;
     margin: 0;
-    height: 80px;
+
     text-align: left;
     position: fixed;
     top: 0;
     background-color: var(--menu-bg);
     z-index: 1;
-    padding: var(--menu-padding);
+    padding: 1.2rem 1rem;
     margin: auto;
-    width: 100%;
+    width: 100svw;
+    align-content: center;
   }
 
   /* Mobile Menu */
