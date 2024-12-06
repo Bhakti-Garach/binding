@@ -126,6 +126,19 @@ body {
     
   }
 
+  blockquote {
+    font-family: var(--block-quote-font);
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    margin: var(--h2-margin);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  em {
+    font-weight: 600;
+  }
+
 /* table */
 .table {
   padding-top: 2rem;
@@ -191,6 +204,12 @@ body {
           padding-top: 2rem;
     
         }
+
+        .footer-grid {
+          width: 60%;
+        }
+
+
     }
 
         /* tablet media query */
