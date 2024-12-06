@@ -21,6 +21,7 @@
 	--subheading-font: Instrument Serif;
 	--block-quote-font: Instrument Serif;
 	--body-font: Hanken Grotesk;
+	--subtitle-font: Hanken Grotesk;
 	--book-visual-font-1: Marcellus;
 	--book-visual-font-2: Lustria;
 	--book-type-font-1: Chivo;
@@ -106,6 +107,20 @@
 	  line-height: var(--h1-line-height);
   
 	}
+
+	.first-box h4 {
+		font-family: var(--body-font);
+		font-size: var(--h4-font-size);
+		margin: var(--h4-margin);
+		color: var(--h4-color);
+		letter-spacing: var(--h4-letter-specing);
+		text-align: center;
+		margin-top: 3rem;
+		line-height: var(--h4-line-height);
+		font-weight: 400;
+		margin-bottom: 3rem;
+	
+	  }
   
 	p {
 	  font-family: var(--body-font);
