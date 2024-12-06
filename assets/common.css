@@ -398,6 +398,7 @@ body {
   
   textarea:focus {
     border-color: #0077cc;
+    color: var(--body-color);
   }
   
   button.submit-btn {
@@ -488,3 +489,9 @@ body {
             
           }
       }
+
+          @media (min-width: 1280px){
+      .footer-grid {
+        width: 50%;
+      }
+    }
