@@ -117,3 +117,123 @@
 	  margin: 1rem;
 	  
 	}
+
+	blockquote {
+		font-family: var(--block-quote-font);
+		font-size: var(--h2-font-size);
+		color: var(--h2-color);
+		margin: var(--h2-margin);
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	  }
+
+/* table */
+.table {
+	padding-top: 2rem;
+  }
+  .table p {
+	display: grid;
+	grid-template-rows: 1fr;
+	font-family: var(--menu-font);
+	font-size: var(--menu-font-size);
+	color: var(--p-color);
+	text-transform: uppercase;
+	border: 1px solid white;
+	font-weight: 300;
+	margin: 0;
+	padding: 10px;
+	
+  }
+  
+  .table em{
+	font-weight: 500;
+  }
+  
+	  /* desktop media query */
+	  @media (min-width: 1280px) {
+		article h1 {
+			font-size: 4.5rem;
+			padding-top: 2rem;
+			width: 700px;
+			margin: auto;
+			text-align: center;
+			line-height: 4.5rem;
+		  }
+	
+		  .chapter-title {
+			width: 40%;
+			align-items: center;
+			margin: auto;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		  }
+	
+		  .table {
+			padding-top: 2rem;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			width: 60%;
+			margin: auto;
+		  }
+		  .table p {
+			font-family: var(--menu-font);
+			font-size: var(--menu-font-size);
+			color: var(--p-color);
+			text-transform: uppercase;
+			border: 1px solid white;
+			font-weight: 300;
+			margin: 0;
+			padding: 10px;
+			
+		  }
+		  .first-box {
+			width: 50%;
+			margin: auto;
+			padding-top: 2rem;
+	  
+		  }
+  
+		  .footer-grid {
+			width: 60%;
+		  }
+  
+  
+	  }
+  
+		  /* tablet media query */
+		  @media (min-width: 768px) {
+			h1 {
+				font-size: 4rem;
+				padding-top: 2rem;
+				width: 80%;
+				margin: auto;
+				text-align: center;
+				line-height: 4rem;
+			  }
+		
+			  .table {
+				padding-top: 2rem;
+				display: grid;
+				grid-template-rows: 1fr;
+				width: 60%;
+				margin: auto;
+			  }
+			  .table p {
+				font-family: var(--menu-font);
+				font-size: var(--menu-font-size);
+				color: var(--p-color);
+				text-transform: uppercase;
+				border: 1px solid white;
+				font-weight: 300;
+				margin: 0;
+				padding: 10px;
+				
+			  }
+  
+			  .first-box {
+				width: 50%;
+				margin: auto;
+				padding-top: 2rem;
+		  
+			  }
+		  }
