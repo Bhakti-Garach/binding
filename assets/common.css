@@ -347,17 +347,28 @@ body {
     border-radius: 8px;
   }
 
-  h1 {
+  .form-container h1 {
     font-family: var(--heading-font);
     font-size: var(--h1-font-size);
     margin: var(--h1-margin);
     color: var(--h1-color);
+    letter-spacing: var(--h1-letter-specing);
+    text-align: left;
+    margin-top: 4rem;
+    line-height: var(--h1-line-height);
+
   }
 
-  p {
+  .form-container p {
     text-align: left;
-    font-size: 1.1em;
-    color: white;
+    font-family: var(--body-font);
+    font-size: var(--p-font-size);
+    font-weight: var(--p-font-weight);
+    letter-spacing: var(--p-letter-spacing);
+    line-height: var(--p-line-height);
+    color: var(--p-color);
+    padding-top: var(--p-padding-top);
+    padding-bottom: var(--p-padding-bottom);
   }
   
   .book-form {
@@ -367,20 +378,22 @@ body {
   }
   
   label {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
     color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
   }
   
   textarea {
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: var(--p-font-size);
+    border: 1px solid #656565;
     outline: none;
     transition: border 0.3s ease;
-    color: #e0bcbc;
+    color: var(--book-border);
   }
   
   textarea:focus {
@@ -389,11 +402,13 @@ body {
   
   button.submit-btn {
     padding: 12px;
-    font-size: 1.1em;
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+    text-align: center;
     background-color: #0077cc;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -401,6 +416,18 @@ body {
   button.submit-btn:hover {
     background-color: #005fa3;
   }
+
+      /* desktop media query */
+@media (min-width: 1280px) {
+    article h1 {
+        font-size: 4.5rem;
+        padding-top: 2rem;
+        width: 700px;
+        margin: auto;
+        text-align: center;
+        line-height: 4.5rem;
+      }
+    }
   
   /* Mobile media query */
   @media (max-width: 600px) {
