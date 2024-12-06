@@ -312,30 +312,37 @@ body {
         }
 
         .first-box {
-          width: 50%;
+          width: 80%;
           margin: auto;
     
         }
         .second-box {
-          width: 50%;
+          width: 80%;
           margin: auto;
     
         }
   
         .third-box {
-          width: 50%;
+          width: 80%;
           margin: auto;
     
         }
   
         .fourth-box {
-          width: 50%;
+          width: 80%;
           margin: auto;
         }
   
         .fifth-box {
-          width: 50%;
+          width: 80%;
           margin: auto;
+        }
+
+        .chapter-title {
+          margin: auto;
+          width: 80%;
+          padding-left: 1rem;
+          padding-right: 1rem;
         }
         
       }
