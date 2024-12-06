@@ -414,7 +414,10 @@
   
     }
 
-    .footer-grid {
-      width: 50%;
+    @media (min-width: 1280px){
+      .footer-grid {
+        width: 50%;
+      }
     }
+
 
