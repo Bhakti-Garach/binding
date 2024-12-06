@@ -28,7 +28,7 @@
 
   /* color style */
   --body-bg-color: #0E0F0F;
-  --bg-color-1: yellow;
+  --bg-color-1: #feb832;
   --bg-color-2: yellow;
   --bg-color-3: yellow;
   --highlight-color: yellow;
@@ -43,7 +43,7 @@
   --h1-line-height: 3rem;
 
   /* h2 */
-  --h2-font-size: 1.5rem;
+  --h2-font-size: 2rem;
   --h2-margin: 0;
   --h2-color: white;
   --h2-letter-specing: 1px;
@@ -51,7 +51,7 @@
   --h2-font-weight: 300;
 
   /* h3 */
-  --h3-font-size: 1.3rem;
+  --h3-font-size: 1.2rem;
   --h3-font-weight: 400;
   --h3-padding-top: 0.5rem;
   --h3-padding-bottom: 0.5rem;
@@ -99,10 +99,10 @@
 
     /* Desktop media query*/
     @media (min-width: 1280px) {
-      /* h1 {
+      h1 {
         font-size: 4rem;
-        padding-top: 2rem;
-      } */
+
+      }
       .colophon-text {
         display: grid;
         column-gap: 2rem;
@@ -116,6 +116,9 @@
         margin: auto;
         padding-bottom: 30px;
         padding-left: 50px;
+      }
+      .main {
+        height: 80svh;
       }
     }
 
@@ -410,3 +413,4 @@
       border-color: var(--book-border);
   
     }
+
