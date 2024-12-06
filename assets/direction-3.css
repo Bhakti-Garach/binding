@@ -36,7 +36,7 @@
 
   /* color style */
   --body-bg-color: #0E0F0F;
-  --bg-color-1: yellow;
+  --bg-color-1: #feb832;
   --bg-color-2: yellow;
   --bg-color-3: yellow;
   --highlight-color: yellow;
@@ -51,7 +51,7 @@
   --h1-line-height: 3rem;
 
   /* h2 */
-  --h2-font-size: 1.5rem;
+  --h2-font-size: 2rem;
   --h2-margin: 0;
   --h2-color: white;
   --h2-letter-specing: 1px;
@@ -65,6 +65,16 @@
   --h3-margin: 0;
   --h3-color: white;
   --h3-letter-specing: 0.5px;
+
+  /* h4 */
+  --h4-font-size: 1.3rem;
+  --h4-font-weight: 400;
+  --h4-padding-top: 0.5rem;
+  --h4-padding-bottom: 0.5rem;
+  --h4-margin: 0;
+  --h4-color: white;
+  --h4-letter-specing: 0.5px;
+
 
   /* paragraph style */
     --p-font-size: 1rem;
@@ -89,10 +99,8 @@
 body {
   margin: 1rem;
   background-color: var(--body-bg-color);
-
   scroll-behavior: smooth;
 }
-
 
 
   h1 {
@@ -107,6 +115,36 @@ body {
 
   }
 
+  h2 {
+    font-family: var(--subheading-font);
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    letter-spacing: var(--h2-letter-specing);
+    line-height: var(--h2-line-height);
+    text-align: center;
+    margin: auto;
+  }
+
+   h3 {
+    font-family: var(--subheading-font);
+    font-size: var(--h3-font-size);
+    color: var(--h3-color);
+    letter-spacing: var(--h3-letter-specing);
+    margin: auto;
+    text-align: left;
+    margin: var(--h3-margin);
+  }
+
+  h4 {
+    font-family: var(--body-font);
+    font-size: var(--h4-font-size);
+    color: var(--h4-color);
+    letter-spacing: var(--h4-letter-specing);
+    margin: auto;
+    text-align: left;
+    margin: var(--h4-margin);
+  }
+
   p {
     font-family: var(--body-font);
     font-size: var(--p-font-size);
@@ -116,6 +154,36 @@ body {
     letter-spacing: var(--p-letter-spacing);
     margin: 1rem;
     
+  }
+
+  blockquote {
+    font-family: var(--block-quote-font);
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    margin: var(--h2-margin);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* content index */
+
+  .chapter-title h4 {
+    font-family: var(--subheading-font);
+    font-size: var(--h3-font-size);
+    color: var(--h3-color);
+    letter-spacing: var(--h3-letter-specing);
+    margin: auto;
+    margin: var(--h3-margin);
+    text-align: left;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  .chapter h3 {
+    text-align: center;
+    padding-top: var(--h3-padding-top);
+    padding-bottom: var(--h3-padding-bottom);
+    margin-top: 2rem;
   }
 
   /* table */
@@ -151,6 +219,19 @@ body {
         line-height: 4.5rem;
       }
 
+      h3 {
+        width: 50%;
+        margin: auto;
+      }
+
+      .chapter-title {
+        width: 40%;
+        align-items: center;
+        margin: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
       .table {
         padding-top: 2rem;
         display: grid;
@@ -169,6 +250,35 @@ body {
         padding: 10px;
         
       }
+
+      .first-box {
+        width: 50%;
+        margin: auto;
+  
+      }
+
+      .second-box {
+        width: 50%;
+        margin: auto;
+  
+      }
+
+      .third-box {
+        width: 50%;
+        margin: auto;
+  
+      }
+
+      .fourth-box {
+        width: 50%;
+        margin: auto;
+      }
+
+      .fifth-box {
+        width: 50%;
+        margin: auto;
+      }
+
     }
 
     /* tablet media query */
@@ -200,4 +310,169 @@ body {
           padding: 10px;
           
         }
+
+        .first-box {
+          width: 50%;
+          margin: auto;
+    
+        }
+        .second-box {
+          width: 50%;
+          margin: auto;
+    
+        }
+  
+        .third-box {
+          width: 50%;
+          margin: auto;
+    
+        }
+  
+        .fourth-box {
+          width: 50%;
+          margin: auto;
+        }
+  
+        .fifth-box {
+          width: 50%;
+          margin: auto;
+        }
+        
       }
+/* Definition pop up */
+#definition-methodology {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: var(--bg-color-1);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 12;
+}
+
+#definition-methodology p {
+  color: var(--body-bg-color);
+}
+
+
+#definition-methodology:target {
+  display: block;
+}
+
+#definition-methodology .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: var(--menu-font);
+  font-size: var(--menu-font-size);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#definition-methodology .close:hover {
+  text-decoration: underline;
+}
+
+#definition-methodology:target ~ .overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+
+/* semoitics */
+#definition-semiotics {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: var(--bg-color-1);
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 20;
+}
+
+#definition-semiotics p {
+  color: var(--body-bg-color);
+}
+
+#definition-semiotics:target {
+  display: block;
+}
+
+#definition-semiotics .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: var(--menu-font);
+  font-size: var(--menu-font-size);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#definition-semiotics .close:hover {
+  text-decoration: underline;
+}
+
+#definition-semiotics:target ~ .overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+
+.definitions a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.definitions a:hover {
+  text-decoration: underline;
+  color: var(--bg-color-1);
+}
+
+em {
+  font-weight: 600;
+}
+
+cite a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+cite a:hover {
+  text-decoration: underline;
+  color: var(--bg-color-1);
+}
+
+.sub-section h3 {
+  text-align: center;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
