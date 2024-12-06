@@ -10,7 +10,7 @@
 :root {
 
   /* menu style */
-  --menu-bg: black;
+  --menu-bg: #0E0F0F;
   --menu-font: 'DM Mono';
   --menu-text-color: white;
   --menu-font-size: 0.9rem;
@@ -27,7 +27,6 @@
   /* font style */
   --heading-font: Instrument Serif;
   --subheading-font: Instrument Serif;
-  --section-title-font: Hanken Grotesk;
   --block-quote-font: Instrument Serif;
   --body-font: Hanken Grotesk;
   --book-visual-font-1: Marcellus;
@@ -36,7 +35,7 @@
   --book-color-font-1: 'Crimson Text';
 
   /* color style */
-  --body-bg-color: #0F1314;
+  --body-bg-color: #0E0F0F;
   --bg-color-1: yellow;
   --bg-color-2: yellow;
   --bg-color-3: yellow;
@@ -45,13 +44,18 @@
   --body-color: white;
 
   /* h1 style */
-  --h1-font-size: 2rem;
+  --h1-font-size: 3rem;
   --h1-margin: 0;
   --h1-color: white;
   --h1-letter-specing: 1px;
-  --h1-line-height: 4rem;
+  --h1-line-height: 3rem;
 
   /* h2 */
+  --h2-font-size: 1.5rem;
+  --h2-margin: 0;
+  --h2-color: white;
+  --h2-letter-specing: 1px;
+  --h2-line-height: 4rem;
 
   /* h3 */
   --h3-font-size: 1.3rem;
@@ -72,6 +76,23 @@
     --p-color: white;
 }
 
+@media (min-width: 1280px) {
+  :root {
+  --h1-font-size: 4.5rem;
+  --h1-margin: 0;
+  --h1-color: white;
+  --h1-letter-specing: 1px;
+  --h1-line-height: 4.5rem;
+  }
+}
+
+body {
+  margin: 1rem;
+  background-color: var(--body-bg-color);
+
+  scroll-behavior: smooth;
+}
+
 
 
   h1 {
@@ -81,7 +102,7 @@
     color: var(--h1-color);
     letter-spacing: var(--h1-letter-specing);
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 4rem;
     line-height: var(--h1-line-height);
 
   }
@@ -121,20 +142,23 @@
 
     /* desktop media query */
 @media (min-width: 1280px) {
-    h1 {
-        font-size: 4rem;
+    article h1 {
+        font-size: 4.5rem;
         padding-top: 2rem;
-        width: 80%;
+        width: 700px;
         margin: auto;
         text-align: center;
+        line-height: 4.5rem;
       }
 
       .table {
         padding-top: 2rem;
-      }
-      .table p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        margin: auto;
+      }
+      .table p {
         font-family: var(--menu-font);
         font-size: var(--menu-font-size);
         color: var(--p-color);
@@ -146,3 +170,34 @@
         
       }
     }
+
+    /* tablet media query */
+    @media (min-width: 768px) {
+      h1 {
+          font-size: 4rem;
+          padding-top: 2rem;
+          width: 80%;
+          margin: auto;
+          text-align: center;
+          line-height: 4rem;
+        }
+  
+        .table {
+          padding-top: 2rem;
+          display: grid;
+          grid-template-rows: 1fr;
+          width: 60%;
+          margin: auto;
+        }
+        .table p {
+          font-family: var(--menu-font);
+          font-size: var(--menu-font-size);
+          color: var(--p-color);
+          text-transform: uppercase;
+          border: 1px solid white;
+          font-weight: 300;
+          margin: 0;
+          padding: 10px;
+          
+        }
+      }
