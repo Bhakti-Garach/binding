@@ -43,14 +43,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+        <a href="top"></a>
+
     </head>
     <body>
         <header class="menu">
             <!-- sticky menu -->
              <nav>
-                <div class="mobile-menu">MENU</div>
+                <!-- <div class="mobile-menu">MENU</div> -->
                 <ul class="menu-grid">
-                    <li><a href="#home" class="menu-item home">Home</a></li>
+                    <li><a href="#home" class="menu-item home current">Home</a></li>
                     <li><a href="#colophon" class="menu-item colophon">Colophon</a></li>
                     <li><a href="visual.html" class="menu-item visual">Visual</a></li>
                     <li><a href="type.html" class="menu-item type">Type</a></li>
@@ -76,8 +78,10 @@
 
                     <!-- Book Visual -->
                     <div class="book-visual">
-                        <span class="text-vertical">W</br>H</br>Y</span>
-                        <span class="center-text">Visual Research An Introduction to Research Methodologies in Graphic Design</span>
+                        <a href="visual.html">
+                        <span class="text-vertical">W</br>H</br>Y</span></a>
+                        <a href="visual.html">
+                        <span class="center-text">Visual Research An Introduction to Research Methodologies in Graphic Design</span></a>
                         <span class="text-vertical">H</br>O</br>W</span>
                     </div>
 
@@ -112,8 +116,8 @@
             </section>
         </article>
         <article class="colophon-text">
-            <section>
-            <h3>“A Designer’s Shelf” is inspired by the idea that knowledge, like design itself, is interconnected. This collection of readings reflects the layers of thought and practice that shape the work of every designer. Each selection builds upon the others, creating a narrative of discovery that moves from research to storytelling to the emotional power of color.</h3>
+            <section id="colophon">
+            <h2>“A Designer’s Shelf” is inspired by the idea that knowledge, like design itself, is interconnected. This collection of readings reflects the layers of thought and practice that shape the work of every designer. Each selection builds upon the others, creating a narrative of discovery that moves from research to storytelling to the emotional power of color.</h2>
             </section>
             <section>
             <p>The journey begins with Visual Research, which lays the foundation for thoughtful design by emphasizing the importance of asking questions and seeking answers. It introduces methodologies that guide designers in understanding the why behind their work, ensuring that each decision is purposeful and rooted in context. This research-first approach creates a strong base for the creative process, inviting designers to explore and test their ideas with rigor.</p>
@@ -126,7 +130,12 @@
             </section>
         </article>
         <footer>
-            <span>↑</span>
+            <section>
+                <p>Typography & Interaction 1</p>
+            </section>
+            <!-- <div>
+                <a id="top" href="#">↑</a>
+            </div> -->
         </footer>
     </body>
 </html>
