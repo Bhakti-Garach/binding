@@ -1,82 +1,119 @@
-/* h1 {
-    color: pink;
-} */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* MOBILE FIRST */
-
 /* variable list */
 :root {
-    
-    /* H1 styles*/
-    --h1-font-family: "Montserrat";
-    --h1-font-size:60px;
-    --h1-font-weight:600;
-    --h1-line-height:60px;
 
-    /* H2 styles */
-    --h2-font-family: "Montserrat";
-    --h2-font-size: 48px;
-    --h2-font-weight: 500;
-    --h2-line-height: 54px;
-
-    /* H3 styles */
-    --h3-font-family: "Montserrat";
-    --h3-font-size: 32px;
-    --h3-font-weight: 500;
-    --h3-line-height: 42px;
-
-    /* H4 styles */
-	--p-font-family: "Inconsolata";
-	--p-font-size:23px;
-	--p-font-weight:600;
-	--p-line-height:30px;
-
-    /* p styles*/
-	--p-font-family: "Inconsolata";
-	--p-font-size:17px;
-	--p-font-weight:400;
-	--p-line-height:20px;
-    --p-padding-top:20px;
-    --p-padding-bottom:20px;
-}
-
-/* heading styles */
-h1{
-	margin: auto;
-	font-family: var(--h1-font-family);
-	font-size: var(--h1-font-size);
-	font-weight:var(--h1-font-weight);
-	line-height:var(--h1-line-height);
-	text-transform:uppercase;
-    color: red;
-}
-
-h2{
-	margin: auto;
-	font-family: var(--h2-font-family);
-	font-size: var(--h2-font-size);
-	font-weight:var(--h2-font-weight);
-	line-height:var(--h2-line-height);
-	text-transform:uppercase;
-}
-
-h3{
-	margin: auto;
-	font-family: var(--h3-font-family);
-	font-size: var(--h3-font-size);
-	font-weight:var(--h3-font-weight);
-	line-height:var(--h3-line-height);
-	text-transform:uppercase;
-}
-
-p{
-	font-family: var(--p-font-family);
-	font-size: var(--p-font-size);
-	font-weight: var(--p-font-weight);
-	line-height: var(--p-line-height);
-    padding-top: var(--p-padding-top);
-    padding-bottom: var(--p-padding-bottom);
-}
+	/* menu style */
+	--menu-bg: #0E0F0F;
+	--menu-font: 'DM Mono';
+	--menu-text-color: white;
+	--menu-font-size: 0.9rem;
+	--menu-padding: 1rem;
+	--menu-underline-width: 1px;
+	--circle-size: 15px;
+	--circle-spacing: 0.5rem;
+  
+	/* general style */
+	--base-size: 20px;
+	--arrow-color: white;
+	--book-color: white;
+  
+	/* font style */
+	--heading-font: Instrument Serif;
+	--subheading-font: Instrument Serif;
+	--block-quote-font: Instrument Serif;
+	--body-font: Hanken Grotesk;
+	--book-visual-font-1: Marcellus;
+	--book-visual-font-2: Lustria;
+	--book-type-font-1: Chivo;
+	--book-color-font-1: 'Crimson Text';
+  
+	/* color style */
+	--body-bg-color: #0E0F0F;
+	--bg-color-1: #feb832;
+	--bg-color-2: yellow;
+	--bg-color-3: yellow;
+	--highlight-color: yellow;
+	--book-border: #656565;
+	--body-color: white;
+  
+	/* h1 style */
+	--h1-font-size: 3rem;
+	--h1-margin: 0;
+	--h1-color: white;
+	--h1-letter-specing: 1px;
+	--h1-line-height: 3rem;
+  
+	/* h2 */
+	--h2-font-size: 2rem;
+	--h2-margin: 0;
+	--h2-color: white;
+	--h2-letter-specing: 1px;
+	--h2-line-height: 4rem;
+  
+	/* h3 */
+	--h3-font-size: 1.3rem;
+	--h3-font-weight: 400;
+	--h3-padding-top: 0.5rem;
+	--h3-padding-bottom: 0.5rem;
+	--h3-margin: 0;
+	--h3-color: white;
+	--h3-letter-specing: 0.5px;
+  
+	/* h4 */
+	--h4-font-size: 1.3rem;
+	--h4-font-weight: 400;
+	--h4-padding-top: 0.5rem;
+	--h4-padding-bottom: 0.5rem;
+	--h4-margin: 0;
+	--h4-color: white;
+	--h4-letter-specing: 0.5px;
+  
+  
+	/* paragraph style */
+	  --p-font-size: 1rem;
+	  --p-font-weight: 200;
+	  --p-padding-top: 0.5rem;
+	  --p-padding-bottom: 0.5rem;
+	  --p-line-height: 1.5rem;
+	  --p-letter-spacing: 0.5px;
+	  --p-color: white;
+  }
+  
+  @media (min-width: 1280px) {
+	:root {
+	--h1-font-size: 4.5rem;
+	--h1-margin: 0;
+	--h1-color: white;
+	--h1-letter-specing: 1px;
+	--h1-line-height: 4.5rem;
+	}
+  }
+  
+  body {
+	margin: 1rem;
+	background-color: var(--body-bg-color);
+	scroll-behavior: smooth;
+  }
+  
+  
+	h1 {
+	  font-family: var(--heading-font);
+	  font-size: var(--h1-font-size);
+	  margin: var(--h1-margin);
+	  color: var(--h1-color);
+	  letter-spacing: var(--h1-letter-specing);
+	  text-align: center;
+	  margin-top: 4rem;
+	  line-height: var(--h1-line-height);
+  
+	}
+  
+	p {
+	  font-family: var(--body-font);
+	  font-size: var(--p-font-size);
+	  color: var(--p-color);
+	  line-height: var(--p-line-height);
+	  font-weight: var(--p-font-weight);
+	  letter-spacing: var(--p-letter-spacing);
+	  margin: 1rem;
+	  
+	}
