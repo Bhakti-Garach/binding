@@ -8,182 +8,228 @@
 
 /* variable list */
 :root {
-    --menu-bg: black;
-    --menu-font: 'DM Mono';
-    --menu-text-color: white;
-    --menu-font-size: 1rem;
-    --menu-padding: 1rem;
-    --menu-underline-width: 1px;
-    --circle-size: 15px;
-    --circle-spacing: 0.5rem;
-    --arrow-color: white;
-    --book-color: white;
 
-    /* font styles */
-    --heading-font: TimesNow-ExtraLight;
-	--subheading-font: TimesNow-ExtraLight;
-    --body-font: DM Sans;
-    --bookvisualtitle1-font: Cinzel;
+  /* menu style */
+  --menu-bg: #0E0F0F;
+  --menu-font: 'DM Mono';
+  --menu-text-color: white;
+  --menu-font-size: 0.9rem;
+  --menu-padding: 1rem;
+  --menu-underline-width: 1px;
+  --circle-size: 15px;
+  --circle-spacing: 0.5rem;
 
-    /* h1 style */
-    --h1-font-size: 4rem;
-    --h1-margin: 0;
-    --h1-color: white;
+  /* general style */
+  --base-size: 20px;
+  --arrow-color: white;
+  --book-color: white;
 
-    /* h2 style */
-    --h2-font-size: 1.5rem;
-    --h2-margin: 0;
-    --h2-color: white;
+  /* font style */
+  --heading-font: Instrument Serif;
+  --subheading-font: Instrument Serif;
+  --block-quote-font: Instrument Serif;
+  --body-font: Hanken Grotesk;
+  --book-visual-font-1: Marcellus;
+  --book-visual-font-2: Lustria;
+  --book-type-font-1: Chivo;
+  --book-color-font-1: 'Crimson Text';
 
-    /* h3 style */
-    --h3-font-size: 1rem;
-    --h3-margin: 0;
-    --h3-color: white;
+  /* color style */
+  --body-bg-color: #0E0F0F;
+  --bg-color-1: #feb832;
+  --bg-color-2: yellow;
+  --bg-color-3: yellow;
+  --highlight-color: yellow;
+  --book-border: #656565;
+  --body-color: white;
+
+  /* h1 style */
+  --h1-font-size: 3rem;
+  --h1-margin: 0;
+  --h1-color: white;
+  --h1-letter-specing: 1px;
+  --h1-line-height: 3rem;
+
+  /* h2 */
+  --h2-font-size: 2rem;
+  --h2-margin: 0;
+  --h2-color: white;
+  --h2-letter-specing: 1px;
+  --h2-line-height: 4rem;
+
+  /* h3 */
+  --h3-font-size: 1.3rem;
+  --h3-font-weight: 400;
+  --h3-padding-top: 0.5rem;
+  --h3-padding-bottom: 0.5rem;
+  --h3-margin: 0;
+  --h3-color: white;
+  --h3-letter-specing: 0.5px;
+
+  /* h4 */
+  --h4-font-size: 1.3rem;
+  --h4-font-weight: 400;
+  --h4-padding-top: 0.5rem;
+  --h4-padding-bottom: 0.5rem;
+  --h4-margin: 0;
+  --h4-color: white;
+  --h4-letter-specing: 0.5px;
+
+
+  /* paragraph style */
+    --p-font-size: 1rem;
+    --p-font-weight: 200;
+    --p-padding-top: 0.5rem;
+    --p-padding-bottom: 0.5rem;
+    --p-line-height: 1.5rem;
+    --p-letter-spacing: 0.5px;
+    --p-color: white;
+}
+
+@media (min-width: 1280px) {
+  :root {
+  --h1-font-size: 4.5rem;
+  --h1-margin: 0;
+  --h1-color: white;
+  --h1-letter-specing: 1px;
+  --h1-line-height: 4.5rem;
   }
-
-
+}
 
 body {
+  margin: 1rem;
+  background-color: var(--body-bg-color);
+  scroll-behavior: smooth;
+}
+
+
+  h1 {
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    margin: var(--h1-margin);
+    color: var(--h1-color);
+    letter-spacing: var(--h1-letter-specing);
+    text-align: center;
+    margin-top: 4rem;
+    line-height: var(--h1-line-height);
+
+  }
+
+  p {
+    font-family: var(--body-font);
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+    line-height: var(--p-line-height);
+    font-weight: var(--p-font-weight);
+    letter-spacing: var(--p-letter-spacing);
     margin: 1rem;
-    background-color: black;
+    
   }
 
-  /* circle colors */
-  .home {
-    --circle-color: #1FDE86;
-  }
+/* table */
+.table {
+  padding-top: 2rem;
+}
+.table p {
+  display: grid;
+  grid-template-rows: 1fr;
+  font-family: var(--menu-font);
+  font-size: var(--menu-font-size);
+  color: var(--p-color);
+  text-transform: uppercase;
+  border: 1px solid white;
+  font-weight: 300;
+  margin: 0;
+  padding: 10px;
   
-  .colophon {
-    --circle-color: #948EFF;
-  }
-  
-  .visual {
-    --circle-color: #EAFF01;
-  }
-  
-  .type {
-    --circle-color: #F4320C;
-  }
-  
-  .interaction {
-    --circle-color: #FF8BCD;
-  }
-  
-  .reading {
-    --circle-color: #0095FF;
-  }
+}
 
-  /* Sticky menu styles */
-.menu {
-    position: sticky;
-    top: 0;
-    background-color: var(--menu-bg);
-    z-index: 10;
-    padding: var(--menu-padding);
-  }
+.table em{
+  font-weight: 500;
+}
 
-  .menu-grid {
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-  }
-
-  /* Desktop media query*/
-  @media (min-width: 1280px) {
-    .menu-grid {
-      grid-template-columns: repeat(6, 1fr);
-    }
-  }
-
-  .menu-item {
-    font-family: var(--menu-font);
-    font-size: var(--menu-font-size);
-    text-transform: uppercase;
-    color: var(--menu-text-color);
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    position: relative;
-    padding: 0.5rem;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-  animation: slideIn 0.6s ease-out forwards;
-  }
-
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+    /* desktop media query */
+    @media (min-width: 1280px) {
+      article h1 {
+          font-size: 4.5rem;
+          padding-top: 2rem;
+          width: 700px;
+          margin: auto;
+          text-align: center;
+          line-height: 4.5rem;
+        }
   
-  .menu-item:nth-child(1) {
-    animation-delay: 0.1s;
-  }
+        .chapter-title {
+          width: 40%;
+          align-items: center;
+          margin: auto;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
   
-  .menu-item:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  .menu-item:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  
-  .menu-item:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  
-  .menu-item:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  
-  .menu-item:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-
-  .menu-item::before {
-    content: '';
-    width: var(--circle-size);
-    height: var(--circle-size);
-    background-color: var(--circle-color);
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: var(--circle-spacing);
-  }
-
-  .menu-item:hover {
-    color: var(--circle-color);
-    text-decoration: underline var(--circle-color) var(--menu-underline-width);
-    text-underline-offset: 4px;
-  }
-
-      /* desktop media query */
-@media (min-width: 1280px) {
-    article {
-        margin: auto;
-        max-width: 80%;
+        .table {
+          padding-top: 2rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 60%;
+          margin: auto;
+        }
+        .table p {
+          font-family: var(--menu-font);
+          font-size: var(--menu-font-size);
+          color: var(--p-color);
+          text-transform: uppercase;
+          border: 1px solid white;
+          font-weight: 300;
+          margin: 0;
+          padding: 10px;
+          
+        }
+        .first-box {
+          width: 50%;
+          margin: auto;
+          padding-top: 2rem;
+    
         }
     }
 
-h2 {
-	font-family: var(--heading-font);
-	font-size: var(--h2-font-size);
-}
+        /* tablet media query */
+        @media (min-width: 768px) {
+          h1 {
+              font-size: 4rem;
+              padding-top: 2rem;
+              width: 80%;
+              margin: auto;
+              text-align: center;
+              line-height: 4rem;
+            }
+      
+            .table {
+              padding-top: 2rem;
+              display: grid;
+              grid-template-rows: 1fr;
+              width: 60%;
+              margin: auto;
+            }
+            .table p {
+              font-family: var(--menu-font);
+              font-size: var(--menu-font-size);
+              color: var(--p-color);
+              text-transform: uppercase;
+              border: 1px solid white;
+              font-weight: 300;
+              margin: 0;
+              padding: 10px;
+              
+            }
 
-h3{
-	font-family: var(--subheading-font);
-	font-size: var(--h3-font-size);
-}
+            .first-box {
+              width: 50%;
+              margin: auto;
+              padding-top: 2rem;
+        
+            }
+        }
 
 
 
