@@ -2,7 +2,7 @@
 :root {
 
   /* menu style */
-  --menu-bg: black;
+  --menu-bg: #0E0F0F;
   --menu-font: 'DM Mono';
   --menu-text-color: white;
   --menu-font-size: 0.9rem;
@@ -19,7 +19,6 @@
   /* font style */
   --heading-font: Instrument Serif;
   --subheading-font: Instrument Serif;
-  --section-title-font: Hanken Grotesk;
   --block-quote-font: Instrument Serif;
   --body-font: Hanken Grotesk;
   --book-visual-font-1: Marcellus;
@@ -28,7 +27,7 @@
   --book-color-font-1: 'Crimson Text';
 
   /* color style */
-  --body-bg-color: #0F1314;
+  --body-bg-color: #0E0F0F;
   --bg-color-1: yellow;
   --bg-color-2: yellow;
   --bg-color-3: yellow;
@@ -37,13 +36,19 @@
   --body-color: white;
 
   /* h1 style */
-  --h1-font-size: 2rem;
+  --h1-font-size: 3rem;
   --h1-margin: 0;
   --h1-color: white;
   --h1-letter-specing: 1px;
-  --h1-line-height: 4rem;
+  --h1-line-height: 3rem;
 
   /* h2 */
+  --h2-font-size: 1.5rem;
+  --h2-margin: 0;
+  --h2-color: white;
+  --h2-letter-specing: 1px;
+  --h2-line-height: 4rem;
+  --h2-font-weight: 300;
 
   /* h3 */
   --h3-font-size: 1.3rem;
@@ -63,6 +68,17 @@
     --p-letter-spacing: 0.5px;
     --p-color: white;
 }
+
+ @media (min-width: 1280px) {
+  :root {
+  --h1-font-size: 4.5rem;
+  --h1-margin: 0;
+  --h1-color: white;
+  --h1-letter-specing: 1px;
+  --h1-line-height: 4.5rem;
+  }
+}
+
   .main {
     text-align: center;
     display: flex;
@@ -70,11 +86,12 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin-top: 4rem;
   }
 
   h1 {
     font-family: var(--heading-font);
-    font-size: var(--h1-font-size);
+    font-size: 3rem;
     margin: var(--h1-margin);
     color: var(--h1-color);
     letter-spacing: var(--h1-letter-specing);
@@ -82,10 +99,10 @@
 
     /* Desktop media query*/
     @media (min-width: 1280px) {
-      h1 {
+      /* h1 {
         font-size: 4rem;
         padding-top: 2rem;
-      }
+      } */
       .colophon-text {
         display: grid;
         column-gap: 2rem;
@@ -102,15 +119,17 @@
       }
     }
 
-h3 {
-  font-family: var(--section-title-font);
-  font-size: var(--h3-font-size);
-  font-weight: var(--h3-font-weight);
-  color: var(--h3-color);
-  letter-spacing: var(--h3-letter-specing);
+.colophon-text h2 {
+  font-family: var(--subheading-font);
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  color: var(--h2-color);
+  letter-spacing: var(--h2-letter-specing);
   margin: 0.5rem 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  font-weight: var(--h2-font-weight);
+  border-bottom: 1px solid white;
 }
 
   p {
@@ -171,10 +190,10 @@ h3 {
     display: flex;
     gap: 0.6rem;
     align-items:end;
-    justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    overflow-x: hidden;
+    overflow: clip;
+    
   }
 
   /* book visual */
@@ -295,7 +314,6 @@ h3 {
     height: 600px;
     border: solid 1px;
     border-color: var(--book-border);
-
   }
 
   .empty-book-2 {
@@ -304,7 +322,6 @@ h3 {
     height: 500px;
     border: solid 1px;
     border-color: var(--book-border);
-
   }
 
   .empty-book-3 {
@@ -313,7 +330,6 @@ h3 {
     height: 470px;
     border: solid 1px;
     border-color: var(--book-border);
-
   }
 
   .empty-book-4 {
@@ -342,7 +358,6 @@ h3 {
     border-color: var(--book-border);
 
   }
-
   .empty-book-7 {
     position: relative;
     width: 20px;
@@ -361,38 +376,37 @@ h3 {
 
   }
 
-  .empty-book-9 {
-    position: relative;
-    width: 20px;
-    height: 600px;
-    border: solid 1px;
-    border-color: var(--book-border);
+    .empty-book-9 {
+      position: relative;
+      width: 20px;
+      height: 600px;
+      border: solid 1px;
+      border-color: var(--book-border);
+  
+    }
 
-  }
-
-  .empty-book-10 {
-    position: relative;
-    width: 120px;
-    height: 550px;
-    border: solid 1px;
-    border-color: var(--book-border);
-
-  }
-
-  .empty-book-11 {
-    position: relative;
-    width: 50px;
-    height: 485px;
-    border: solid 1px;
-    border-color: var(--book-border);
-
-  }
-
-  .empty-book-12 {
-    position: relative;
-    width: 90px;
-    height: 520px;
-    border: solid 1px;
-    border-color: var(--book-border);
-
-  }
+    .empty-book-10 {
+      position: relative;
+      width: 120px;
+      height: 550px;
+      border: solid 1px;
+      border-color: var(--book-border);
+  
+    }
+  
+    .empty-book-11 {
+      position: relative;
+      width: 50px;
+      height: 485px;
+      border: solid 1px;
+      border-color: var(--book-border);
+  
+    }
+    .empty-book-12 {
+      position: relative;
+      width: 90px;
+      height: 520px;
+      border: solid 1px;
+      border-color: var(--book-border);
+  
+    }
