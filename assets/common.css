@@ -15,7 +15,7 @@
 :root {
 
     /* menu style */
-    --menu-bg: black;
+    --menu-bg: #0E0F0F;
     --menu-font: 'DM Mono';
     --menu-text-color: white;
     --menu-font-size: 0.9rem;
@@ -37,30 +37,81 @@
     --book-visual-font-1: Marcellus;
     --book-visual-font-2: Lustria;
     --book-type-font-1: Chivo;
-    --book-color-font-1: Crimson-Text;
+    --book-color-font-1: 'Crimson Text';
 
     /* color style */
-    --body-bg-color: #0F1314;
+    --body-bg-color: #0E0F0F;
     --bg-color-1: yellow;
     --bg-color-2: yellow;
     --bg-color-3: yellow;
     --highlight-color: yellow;
     --book-border: #656565;
+    --body-color: white;
 
     /* h1 style */
-    --h1-font-size: 2rem;
+    --h1-font-size: 3rem;
     --h1-margin: 0;
     --h1-color: white;
+    --h1-letter-specing: 1px;
+    --h1-line-height: 3rem;
+  
+    /* h2 */
+    --h2-font-size: 1.5rem;
+    --h2-margin: 0;
+    --h2-color: white;
+    --h2-letter-specing: 1px;
+    --h2-line-height: 4rem;
+  
+    /* h3 */
+    --h3-font-size: 1.3rem;
+    --h3-font-weight: 400;
+    --h3-padding-top: 0.5rem;
+    --h3-padding-bottom: 0.5rem;
+    --h3-margin: 0;
+    --h3-color: white;
+    --h3-letter-specing: 0.5px;
+  
+    /* paragraph style */
+      --p-font-size: 1rem;
+      --p-font-weight: 200;
+      --p-padding-top: 0.5rem;
+      --p-padding-bottom: 0.5rem;
+      --p-line-height: 1.5rem;
+      --p-letter-spacing: 0.5px;
+      --p-color: white;
   }
 
-
+  @media (min-width: 1280px) {
+    :root {
+    --h1-font-size: 4.5rem;
+    --h1-margin: 0;
+    --h1-color: white;
+    --h1-letter-specing: 1px;
+    --h1-line-height: 4.5rem;
+    }
+  }
 
 body {
     margin: 1rem;
-    background-color: black;
-    margin: auto;
-    overflow-x: hidden;
+    background-color: var(--body-bg-color);
+
+    scroll-behavior: smooth;
   }
+
+/* footer {
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+}
+
+#top {
+    font-size: 1.5rem;
+    background-color: white;
+    color: var(--body-bg-color);
+    padding: 1rem;
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+    } */
 
   /* circle colors */
   .home {
@@ -89,28 +140,28 @@ body {
 
   /* Sticky menu styles */
 
-  /* .menu {
-    position: fixed;
+  .menu {
+    position: sticky;
     z-index: 10;
     top: 0;
-  } */
+  }
 
   .menu-grid {
     display: grid;
-    gap: 0.5rem;
+    gap: 0.7rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     list-style: none;
     margin: 0;
 
     text-align: left;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     background-color: var(--menu-bg);
-    z-index: 1;
-    padding: 1.2rem 1rem;
+    /* z-index: 1; */
+    padding: 0.5rem 1rem 1rem 1rem;
     margin: auto;
-    width: 100svw;
+    /* width: 100svw; */
     align-content: center;
   }
 
@@ -138,13 +189,14 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 80px;
     text-align: left;
-    position: fixed;
+    /* position: fixed;
     top: 0;
+    z-index: 1; */
     background-color: var(--menu-bg);
-    z-index: 1;
+    
     padding: var(--menu-padding);
     }
   }
@@ -159,14 +211,41 @@ body {
     justify-content: left;
     position: relative;
     padding-top: 1rem;
-    overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-  animation: slideIn 0.6s ease-out forwards;
+    animation: slideIn 0.6s ease-out forwards;
+  }
+
+  .menu-item.current {
+    text-decoration: underline;
+  }
+
+  .current.home {
+    color: var(--circle-color);
+  }
+
+  .colophon:visited {
+    text-decoration: underline var(--circle-color)
+  }
+
+  .current.visual {
+    color: var(--circle-color);
+  }
+
+  .current.type {
+    color: var(--circle-color)
+  }
+
+  .current.interaction {
+    color: var(--circle-color);
+  }
+
+  .current.reading {
+    color: var(--circle-color)
   }
 
   /* Tablet media query*/
-  @media (min-width: 680px) {
+  @media (min-width: 900px) {
     .menu-grid {
     display: grid;
     gap: 0.5rem;
@@ -174,10 +253,10 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 80px;
     text-align: left;
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: var(--menu-bg);
     z-index: 1;
@@ -247,6 +326,12 @@ body {
   }
 
   .menu-item:hover {
+    color: var(--circle-color);
+    text-decoration: underline var(--circle-color) var(--menu-underline-width);
+    text-underline-offset: 4px;
+  }
+
+  .menu-item:active {
     color: var(--circle-color);
     text-decoration: underline var(--circle-color) var(--menu-underline-width);
     text-underline-offset: 4px;
